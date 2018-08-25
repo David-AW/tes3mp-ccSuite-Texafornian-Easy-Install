@@ -6,7 +6,7 @@ This script requires **ScriptLoader.lua** url: https://github.com/David-AW/tes3m
 
 # Installation
 
-Drop all scripts from **scripts** folder in this repo *into* **mpstuff/scripts/**
+Drop all scripts from this repo *into* **mpstuff/scripts/**
 
 Drop all json files from **data** folder in this repo *into* **mpstuff/data/**
 
