@@ -370,7 +370,7 @@ function birthsignChanger(pid, pick)
 	if Players[pid]:IsAdmin() then
 	else
 
-		if tokenCalc(pid, playerName, MethodsSettings.tokenCostBirthsign) == false then
+		if tokenCalc(pid, playerName, ccPerksSettings.tokenCostBirthsign) == false then
 			return false
 		end
 	end
@@ -392,7 +392,7 @@ function creatureChanger(pid, pick)
 	if Players[pid]:IsAdmin() then
 	else
 
-		if tokenCalc(pid, playerName, MethodsSettings.tokenCostCreature) == false then
+		if tokenCalc(pid, playerName, ccPerksSettings.tokenCostCreature) == false then
 			return false
 		end
 	end
@@ -460,7 +460,7 @@ function genderChanger(pid, gender)
 	if Players[pid]:IsAdmin() then
 	else
 
-		if tokenCalc(pid, playerName, MethodsSettings.tokenCostGender) == false then
+		if tokenCalc(pid, playerName, ccPerksSettings.tokenCostGender) == false then
 			return false
 		end
 	end
@@ -522,7 +522,7 @@ function hairChanger(pid, pick)
 	if Players[pid]:IsAdmin() then
 	else
 
-		if tokenCalc(pid, playerName, MethodsSettings.tokenCostHair) == false then
+		if tokenCalc(pid, playerName, ccPerksSettings.tokenCostHair) == false then
 			return false
 		end
 	end
@@ -582,7 +582,7 @@ function headChanger(pid, pick)
 	if Players[pid]:IsAdmin() then
 	else
 
-		if tokenCalc(pid, playerName, MethodsSettings.tokenCostHead) == false then
+		if tokenCalc(pid, playerName, ccPerksSettings.tokenCostHead) == false then
 			return false
 		end
 	end
@@ -608,7 +608,7 @@ function lotteryHandler(pid) -- Used to generate prizes for tokens
 	if Players[pid]:IsAdmin() then
 	else
 		
-		if tokenCalc(pid, playerName, MethodsSettings.tokenCostLottery) == false then
+		if tokenCalc(pid, playerName, ccPerksSettings.tokenCostLottery) == false then
 			return false
 		end
 	end
@@ -742,7 +742,7 @@ function raceChanger(pid, pick)
 	if Players[pid]:IsAdmin() then
 	else
 
-		if tokenCalc(pid, playerName, MethodsSettings.tokenCostRace) == false then
+		if tokenCalc(pid, playerName, ccPerksSettings.tokenCostRace) == false then
 			return false
 		end
 	end
@@ -820,7 +820,7 @@ function spawnPet(pid, pet)
 
 	if Players[pid]:IsAdmin() then
 	else
-		if tokenCalc(pid, playerName, MethodsSettings.tokenCostPet) == false then
+		if tokenCalc(pid, playerName, ccPerksSettings.tokenCostPet) == false then
 			return false
 		end
 		
@@ -905,7 +905,7 @@ function warpHandler(pid, destination)
 	if Players[pid]:IsAdmin() then
 	else
     
-		if tokenCalc(pid, playerName, MethodsSettings.tokenCostWarp) == false then
+		if tokenCalc(pid, playerName, ccPerksSettings.tokenCostWarp) == false then
 			return false
 		end
 	end
@@ -918,7 +918,7 @@ function warpHandler(pid, destination)
 end
 
 function windowBirthsign(pid)
-	local windowLabel = "Please choose a birthsign (" .. MethodsSettings.tokenCostBirthsign .. " token(s)):"
+	local windowLabel = "Please choose a birthsign (" .. ccPerksSettings.tokenCostBirthsign .. " token(s)):"
     local windowText = "The Apprentice\nThe Atronach\nThe Lady\nThe Lord\nThe Lover\nThe Mage\nThe Ritual\nThe Serpent\nThe Shadow\nThe Steed\nThe Thief\nThe Tower\nThe Warrior\nCancel"
 	tes3mp.ListBox(pid, ccSettings.windowChangeBirthsign, windowLabel, windowText)
 end
@@ -933,12 +933,12 @@ function windowCreature(pid)
 		end
 	end
 
-    local windowLabel = "Please choose a creature (" .. MethodsSettings.tokenCostCreature .. " token(s)):"
+    local windowLabel = "Please choose a creature (" .. ccPerksSettings.tokenCostCreature .. " token(s)):"
 	tes3mp.ListBox(pid, ccSettings.windowSetCreature, windowLabel, ccCreature.creatureText)
 end
 
 function windowGender(pid)
-    local windowLabel = "Please choose a gender (" .. MethodsSettings.tokenCostGender .. " token(s)):"
+    local windowLabel = "Please choose a gender (" .. ccPerksSettings.tokenCostGender .. " token(s)):"
     local windowText = "Female\nMale\nCancel"
 	tes3mp.ListBox(pid, ccSettings.windowChangeGender, windowLabel, windowText)
 end
@@ -957,7 +957,7 @@ function windowHair(pid)
 
     windowText = windowText .. "Cancel"
 
-    local windowLabel = "Please choose a hairstyle (" .. MethodsSettings.tokenCostHair .. " token(s)):"
+    local windowLabel = "Please choose a hairstyle (" .. ccPerksSettings.tokenCostHair .. " token(s)):"
 	tes3mp.ListBox(pid, ccSettings.windowChangeHair, windowLabel, windowText)
 end
 
@@ -975,23 +975,23 @@ function windowHead(pid)
 
     windowText = windowText .. "Cancel"
 
-    local windowLabel = "Please choose a head (" .. MethodsSettings.tokenCostHead .. " token(s)):"
+    local windowLabel = "Please choose a head (" .. ccPerksSettings.tokenCostHead .. " token(s)):"
 	tes3mp.ListBox(pid, ccSettings.windowChangeHead, windowLabel, windowText)
 end
 
 function windowPet(pid)
-	local windowLabel = "Please choose a pet (" .. MethodsSettings.tokenCostPet .. " token(s)):\nThey might adopt someone else if you log out!"
+	local windowLabel = "Please choose a pet (" .. ccPerksSettings.tokenCostPet .. " token(s)):\nThey might adopt someone else if you log out!"
     local windowText = "Pack Rat\nRat\nScrib\nCancel"
 	tes3mp.ListBox(pid, ccSettings.windowSpawnPet, windowLabel, windowText)
 end
 
 function windowRace(pid)
-    local windowLabel = "Please choose a race (" .. MethodsSettings.tokenCostRace .. " token(s)):"
+    local windowLabel = "Please choose a race (" .. ccPerksSettings.tokenCostRace .. " token(s)):"
 	tes3mp.ListBox(pid, ccSettings.windowChangeRace, windowLabel, ccRace.raceText)
 end
 
 function windowWarp(pid)
-    local windowLabel = "Please choose a destination (" .. MethodsSettings.tokenCostWarp .. " token(s)):"
+    local windowLabel = "Please choose a destination (" .. ccPerksSettings.tokenCostWarp .. " token(s)):"
 	tes3mp.ListBox(pid, ccSettings.windowWarp, windowLabel, ccWarp.warpText)
 end
 
