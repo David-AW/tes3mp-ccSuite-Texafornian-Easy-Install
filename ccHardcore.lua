@@ -41,7 +41,7 @@ end
 
 -- Used to enable hardcore mode for new players
 Methods.HardcoreMode = function(pid)
-    local newDifficulty = config.difficulty + hardcoreSettings.addedDifficulty
+    local newDifficulty = config.difficulty + ccHardcoreSettings.addedDifficulty
     local playerNameLC = string.lower(Players[pid].name)
 
     -- Enable hardcore mode
