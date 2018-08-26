@@ -777,6 +777,10 @@ Methods[USES_PLAYER_END_CHARACTER_GENERATION].Func = function(pid) -- Called whe
 
         Methods.SpawnPosition(pid)
         Methods.SpawnItems(pid)
+		
+	if ccMOTD.enabled == true then
+		Methods.MOTD(pid)
+	end
     end
 
 end
